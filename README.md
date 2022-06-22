@@ -3,7 +3,10 @@
 ```neon
 parameters:
 	rabbitMQ:
-		name: YOUR_NAME
+		host: HOST
+		user: USER
+		password: PASSWORD
+		name: NAME
 
 extensions:
 	rabbitMQ: Kdyby\RabbitMq\DI\RabbitMqExtension
@@ -13,9 +16,9 @@ services:
 
 rabbitMQ:
 	connection:
-		host: rabbitmq
-		user: viaphone
-		password: draughts-mounting-barnyard-nestle
+		host: %rabbitMQ.host%
+		user: %rabbitMQ.user%
+		password: %rabbitMQ.password%
 
 	producers:
 		general:
