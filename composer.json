@@ -9,10 +9,10 @@
 			"email": "hello@appsdevteam.com"
 		}
 	],
-	"description": "A RabbitMQ adapter for adt/background-queue.",
+	"description": "A RnabbitMQ adapter for adt/background-queue.",
 	"license": "MIT",
 	"require": {
-		"php": ">=8.1",
+		"php": ">=7.4",
 		"adt/background-queue": "^4.0",
 		"kdyby/rabbitmq": "dev-fix-console-default-name",
 		"tracy/tracy": "^2.0"
