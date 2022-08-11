@@ -14,6 +14,10 @@ extensions:
 services:
 	rabbitMQ: ADT\BackgroundQueueRabbitMQ\BackgroundQueueRabbitMQ
 
+console:
+	commands:
+		- ADT\BackgroundQueueRabbitMQ\Command\ReloadConsumersCommand
+
 rabbitMQ:
 	connection:
 		host: %rabbitMQ.host%
