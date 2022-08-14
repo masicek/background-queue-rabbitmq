@@ -1,4 +1,4 @@
-# background-queue-rabbitmq
+# Background Queue RabbitMQ
 
 ```neon
 parameters:
@@ -36,7 +36,7 @@ rabbitMQ:
 			queue: {name: %rabbitMQ.name%, arguments: {'x-queue-type': ['S', 'quorum']}}
 			callback: [@rabbitMQ, 'process']
 			qos:
-				# Consumery máme nastavené tak, že zpracují max 1 zprávu, takže nastavíme,
-				# aby si jich více nezabíral.
+				# Consumers consume only 1 message and are restarted
+				# We need to reflect this by setting prefetchCount to 1
 				prefetchCount: 1
 ```
