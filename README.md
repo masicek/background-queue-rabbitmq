@@ -28,6 +28,11 @@ rabbitMQ:
 			queue: {name: %rabbitMQ.name%, arguments: {'x-queue-type': ['S', 'quorum']}}
 			contentType: text/plain
 
+		waiting:
+			exchange: {name: %rabbitMQ.name%_waiting, type: direct}
+			queue: {name: %rabbitMQ.name%_waiting, arguments: {'x-dead-letter-exchange': ['S', %rabbitMQ.name%], 'x-message-ttl': ['I', 1000]}} # 1s
+			contentType: text/plain
+
 	consumers:
 		general:
 			exchange: {name: %rabbitMQ.name%, type: direct}
