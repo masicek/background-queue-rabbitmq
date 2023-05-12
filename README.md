@@ -16,6 +16,22 @@ services:
 	
 	- ADT\BackgroundQueueRabbitMQ\Command\ReloadConsumersCommand
 
+	rabbitMQ.console.0:
+		class: Kdyby\RabbitMq\Command\ConsumerCommand
+		tags: [console.command: rabbitmq:consumer]
+	rabbitMQ.console.1:
+		class: Kdyby\RabbitMq\Command\PurgeConsumerCommand
+		tags: [console.command: rabbitmq:purge]
+	rabbitMQ.console.2:
+		class: Kdyby\RabbitMq\Command\RpcServerCommand
+		tags: [console.command: rabbitmq:rpc-server]
+	rabbitMQ.console.3:
+		class: Kdyby\RabbitMq\Command\SetupFabricCommand
+		tags: [console.command: rabbitmq:setup-fabric]
+	rabbitMQ.console.4:
+		class: Kdyby\RabbitMq\Command\StdInProducerCommand
+		tags: [console.command: rabbitmq:stdin-producer]
+
 rabbitMQ:
 	connection:
 		host: %rabbitMQ.host%
