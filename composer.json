@@ -14,7 +14,7 @@
 	"require": {
 		"php": ">=7.4",
 		"adt/background-queue": "^4.0",
-		"kdyby/rabbitmq": "dev-fix-console-default-name",
+		"kdyby/rabbitmq": "^1.0 || ^2.0 || ^3.0",
 		"tracy/tracy": "^2.0"
 	},
 	"repositories": [
