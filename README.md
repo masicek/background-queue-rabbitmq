@@ -46,7 +46,7 @@ rabbitMQ:
 
 		waiting:
 			exchange: {name: %rabbitMQ.name%_waiting, type: direct}
-			queue: {name: %rabbitMQ.name%_waiting, arguments: {'x-dead-letter-exchange': ['S', %rabbitMQ.name%], 'x-message-ttl': ['I', 1000]}} # 1s
+			queue: {name: %rabbitMQ.name%_waiting, arguments: {'x-dead-letter-exchange': ['S', %rabbitMQ.name%], 'x-message-ttl': ['I', 100]}} # 100ms
 			contentType: text/plain
 
 	consumers:
