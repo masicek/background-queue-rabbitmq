@@ -25,9 +25,9 @@ class BackgroundQueueRabbitMQ
 		$this->backgroundQueue = $backgroundQueue;
 	}
 
-	public function publish(int $id, ?string $producer = null): void
+	public function publish(int $id, ?string $producer = self::PRODUCER_GENERAL): void
 	{
-		$this->connection->getProducer($producer ?: self::PRODUCER_GENERAL)->publish($id);
+		$this->connection->getProducer($producer)->publish($id);
 	}
 
 	public function publishNoop(): void
