@@ -1,8 +1,7 @@
 <?php
 
-namespace ADT\BackgroundQueueRabbitMQ;
+namespace ADT\BackgroundQueue;
 
-use ADT\BackgroundQueue\BackgroundQueue;
 use Exception;
 use Kdyby\RabbitMq\Connection;
 use PhpAmqpLib\Message\AMQPMessage;
