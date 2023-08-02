@@ -36,9 +36,9 @@ extensions:
 	rabbitMQ: Kdyby\RabbitMq\DI\RabbitMqExtension
 
 services:
-	rabbitMQ: ADT\BackgroundQueueRabbitMQ\BackgroundQueueRabbitMQ
+	rabbitMQ: ADT\BackgroundQueue\BackgroundQueueRabbitMQ
 	
-	- ADT\BackgroundQueueRabbitMQ\Command\ReloadConsumersCommand
+	- ADT\BackgroundQueue\Command\ReloadConsumersCommand
 
 	rabbitMQ.console.0:
 		class: Kdyby\RabbitMq\Command\ConsumerCommand

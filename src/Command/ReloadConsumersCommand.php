@@ -1,8 +1,8 @@
 <?php
 
-namespace ADT\BackgroundQueueRabbitMQ\Command;
+namespace ADT\BackgroundQueue\Command;
 
-use ADT\BackgroundQueueRabbitMQ\BackgroundQueueRabbitMQ;
+use ADT\BackgroundQueue\BackgroundQueueRabbitMQ;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
