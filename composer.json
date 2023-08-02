@@ -9,12 +9,13 @@
 			"email": "hello@appsdevteam.com"
 		}
 	],
-	"description": "A RnabbitMQ adapter for adt/background-queue.",
+	"description": "Nette provider for adt/background-queue.",
 	"license": "MIT",
 	"require": {
-		"php": ">=7.4",
+		"php": "^7.4|^8.0",
 		"adt/background-queue": "^4.0",
 		"kdyby/rabbitmq": "dev-fix-console-default-name",
+		"nette/di": "^2.4|^3.0",
 		"tracy/tracy": "^2.0"
 	},
 	"repositories": [
