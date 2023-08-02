@@ -10,7 +10,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ReloadConsumersCommand extends Command
 {
-	protected static $defaultName = 'background-queue-rabbitmq:reload-consumers';
+	protected static $defaultName = 'background-queue:reload-consumers';
 
 	protected function configure()
 	{
