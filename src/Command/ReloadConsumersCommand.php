@@ -17,15 +17,14 @@ class ReloadConsumersCommand extends Command
 		$this->addArgument(
 			"number",
 			InputArgument::OPTIONAL,
-			'Number of consumers to reload.',
-			1
+			'Number of consumers to reload.'
 		);
 		$this->setDescription('Creates the specified number of noop messages to reload consumers.');
 	}
 
-	protected function execute(InputInterface $input, OutputInterface $output)
+	protected function execute(InputInterface $input, OutputInterface $output): void
 	{
-		/** @var BackgroundQueueRabbitMQ rabbitMQ */
+		/** @var BackgroundQueueRabbitMQ $rabbitMQ */
 		$rabbitMQ = $this->getHelper("container")->getByType(BackgroundQueueRabbitMQ::class);
 
 		for ($i = 0; $i < $input->getArgument("number"); $i++) {

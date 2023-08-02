@@ -1,5 +1,5 @@
 {
-	"name": "adt/background-queue-rabbitmq",
+	"name": "adt/background-queue-nette",
 	"type": "library",
 	"keywords": ["nette", "rabbitmq", "background-queue"],
 	"authors": [
@@ -9,22 +9,15 @@
 			"email": "hello@appsdevteam.com"
 		}
 	],
-	"description": "Nette provider for adt/background-queue.",
+	"description": "Background queue for Nette and RabbitMQ.",
 	"license": "MIT",
 	"require": {
 		"php": "^7.4|^8.0",
 		"adt/background-queue": "^4.0",
-		"kdyby/rabbitmq": "dev-fix-console-default-name",
+		"kdyby/rabbitmq": "^1.0 || ^2.0 || ^3.0",
 		"nette/di": "^2.4|^3.0",
 		"tracy/tracy": "^2.0"
 	},
-	"repositories": [
-		{
-			"type": "git",
-			"url": "https://github.com/thorewi/RabbitMq",
-			"no-api": true
-		}
-	],
 	"autoload": {
 		"psr-4": {
 			"ADT\\BackgroundQueueRabbitMQ\\": "src"
